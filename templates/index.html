@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>index111</title>
+{#    <link href="/mystatic/index.css" rel="stylesheet" type="text/css"/>#}
+{#    <script src="/mystatic/jquery-3.3.1.js"></script>#}
+{#    <script src="/mystatic/index.js"></script>#}
+    <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'index.js' %}"></script>
+</head>
+<body>
+<div class="d1">
+    <form action="/index" method="get">
+        <p>用户名:<input class="name" type="text" value="请输入用户名"></p>
+        <p>密&nbsp;&nbsp;&nbsp;&nbsp;码:<input class="passwd" type="text" value="请输入用户密码"></p>
+        <p class="login"><input type="submit" value="登录"></p>
+    </form>
+</div>
+</body>
+</html>

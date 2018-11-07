@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>Login</title>
+    <style>
+        .context{
+            width: 300px;
+            height: 120px;
+            background-color: lemonchiffon;
+            position: relative;
+            left: 40%;
+        }
+        p{
+            position: relative;
+            left: 10%;
+            padding: 3px 3px;
+        }
+        .submit{
+            display: inline-block;
+            margin: 0px 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="context">
+    <form  method="post">
+        <p>用户名:<input type="text" name="username"></p>
+        <p>密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="text" name="passwd"></p>
+        <p><input class="submit" type="submit" value="提交"></p>
+    </form>
+</div>
+</body>
+</html>

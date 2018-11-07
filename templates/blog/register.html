@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>Register</title>
+    <style>
+        .context{
+            width: 300px;
+            height: 300px;
+            background-color: lemonchiffon;
+            position: relative;
+            left: 40%;
+        }
+        p{
+            position: relative;
+            left: 10%;
+            padding: 3px 3px;
+        }
+        .submit{
+            display: inline-block;
+            margin: 0px 35px;
+        }
+    </style>
+    <script src="{% static 'jquery-3.3.1.js' %}"></script>
+    <script>
+        $(function () {
+            $(".submit1").click(function () {
+                console.log($(".passwd1").prop('value'))
+                if($(".passwd1").prop('value') != $(".passwd2").prop('value')){
+                    alert("密码不统一，请确认!!!")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="context">
+    <form action="{% url 'login'%}" method="post">
+        <p>用&nbsp;&nbsp;户&nbsp;名:<input type="text" name="username"></p>
+        <p>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:<input class="passwd1" type="text" name="passwd"></p>
+{#        <p>确认密码:<input type="text"class="passwd2"  name="passwd"></p>#}
+        <p>手&nbsp;&nbsp;机&nbsp;&nbsp;号:<input type="text" name="phone"></p>
+        <p>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:<input type="text" name="email"></p>
+        <p><input class="submit submit1" type="submit" value="提交"><input class="submit" type="reset" value="重置"></p>
+    </form>
+</div>
+
+</body>
+</html>

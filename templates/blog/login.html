@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>Login</title>
+    <style>
+        .context{
+            width: 300px;
+            height: 120px;
+            background-color: lemonchiffon;
+            position: relative;
+            left: 40%;
+        }
+        p{
+            position: relative;
+            left: 10%;
+            padding: 3px 3px;
+        }
+        .submit{
+            display: inline-block;
+            margin: 0px 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="context">
+    <form action="{% url 'su' %}" method="post">
+{#        <p>用户名:<input type="text" name="username">{{ username }}</p>#}
+{#        <p>密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="text" name="passwd">{{ userpasswd }}</p>#}
+        <p>用户名:<input type="text" name="username">{{ name }}</p>
+        <p>密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="text" name="passwd">{{ passwd }}</p>
+        <p><input class="submit" type="submit" value="提交"><input class="submit" type="reset" value="重置"></p>
+    </form>
+</div>
+</body>
+</html>
